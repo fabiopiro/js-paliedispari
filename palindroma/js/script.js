@@ -12,7 +12,12 @@ console.log(userWord);
 // Creare una funzione per capire se la parola inserita è palindroma
 
 
-
-function isPalindroma () {
+function isPalindrome(word) {
     
+    return word === word.split("").reverse().join("");
+
 }
+
+
+var palindrome = isPalindrome(userWord);
+console.log(palindrome);

@@ -9,7 +9,8 @@ Dichiariamo chi ha vinto.
 
 // L'utente sceglie pari o dispari...
 var userChoice = prompt("Scegli pari o dispari");
-console.log(userChoice);
+console.log("Hai scelto:", userChoice);
+document.getElementById("user_choice").innerHTML = "Hai scelto " + "<span>" + userChoice + "</span>"
 
 if (userChoice == "pari") {
     userChoice = true;
@@ -17,13 +18,13 @@ if (userChoice == "pari") {
     userChoice = false
 }
 
-console.log("pari = ", userChoice);
+console.log("pari?", userChoice);
 
 
 // ...e inserisce un numero da 1 a 5.
 var userNumber = parseInt(prompt("Inserisci un numero tra 1 e 5"));
-
 console.log("Tuo Numero", userNumber);
+document.getElementById("user_number").innerHTML = "Hai scelto " + "<span>" + userNumber + "</span>"
 
 
 // Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
@@ -35,6 +36,7 @@ function randomNumber() {
 
 var computerNumber = randomNumber();
 console.log("Numero del Computer: ", computerNumber);
+document.getElementById("computer_number").innerHTML = "Il computer ha scelto " + "<span>" + computerNumber + "</span>"
 
 
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
@@ -52,12 +54,15 @@ function isSumEven(numUno, numDue) {
 
 sumUserComputer = isSumEven(userNumber, computerNumber);
 console.log("La somma dei due numeri è", sum);
+document.getElementById("number_sum").innerHTML = "La somma dei 2 numeri è: " + "<span>" + sum + "</span>"
+
 console.log(sum + " è pari? " + sumUserComputer);
 
 
 // Dichiariamo chi ha vinto.
 if (userChoice == sumUserComputer) {
     console.log("HAI VINTO!");
+
 } else {
     console.log("HAI PERSO!");
 }

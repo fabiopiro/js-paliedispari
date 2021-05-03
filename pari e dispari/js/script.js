@@ -62,7 +62,9 @@ console.log(sum + " è pari? " + sumUserComputer);
 // Dichiariamo chi ha vinto.
 if (userChoice == sumUserComputer) {
     console.log("HAI VINTO!");
+    document.getElementById("result").innerHTML = "HAI VINTO, hai scelto " + "<span>" + userChoice + "</span>" + " e la somma dei due numeri è " + "<span>" + sumUserComputer + "</span>";
 
 } else {
     console.log("HAI PERSO!");
+    document.getElementById("result").innerHTML = "HAI PERSO, hai scelto " + "<span>" + userChoice + "</span>" + " e la somma dei due numeri è " + "<span>" + sumUserComputer + "</span>";
 }
